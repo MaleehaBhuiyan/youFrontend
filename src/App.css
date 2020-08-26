@@ -1,38 +1,173 @@
-.App {
-  text-align: center;
+/* overall bosy css  */
+
+body {
+    font-family: Baskerville;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+
+
+/* Journal Calendar Css */
+
+.calendar-container,
+.calendar,
+.calendar-header,
+td,
+tr {
+    padding: 0;
+    margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* .calendar-container {
+    border: 5px solid moccasin;
+    position: relative; 
+    left: -450px;
+} */
+
+.calendar-slide-show{
+    border: black;
+    position: relative; 
+    top: 150px;
+    left: -90px;
+}
+
+.calendar {
+    border: 5px solid moccasin;
+    position: relative; 
+    left: -450px;
+    /* background-color: white; */
+    /* border-spacing: 0;
+    border-collapse: collapse; */
+    width: 150%;
+    border-radius: 5%;
+}
+
+.calendar-header {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.calendar-header td {
+    border-spacing: 0;
+    padding-left: 5px;
+    height: 300px;
+    position: relative; 
+    right: -125px;
+    top: -125px;
+}
+
+.day,
+.empty-slot,
+.week-day {
+    text-align: center;
+    height: 40px;
+}
+
+.week-day {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.day {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.day {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+}
+
+.current-day {
+    background-color: #FFDAB9;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    border-radius: 2%;
+    color: white;
+    border-radius: 50%;
+}
+.selected-day {
+    background-color:#FFFACD;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    border-radius: 2%;
+    color: black;
+    border-radius: 50%;
+}
+
+.month-popup {
+    position: absolute;
+    padding: 5px;
+    background: white;
+    border: 2px solid skyblue;
+}
+
+.month-popup div {
+    padding: 0.3em;
+}
+
+.nav-month {
+    position: absolute;
+    top: 0.6em;
+    font-size: 0.6em;
+    right:3px;
+}
+
+.prev {
+}
+
+.next {
+}
+
+.editor-year {
+    max-width: 3.6em;
+}
+
+.label-month,
+.label-year {
+    font-size: 0.6em;
+}
+
+.label-month {
+    cursor: pointer;
+}
+
+
+
+
+/* Journal Form CSS */
+
+.journal-form-container{
+    width: 600px;
+    height: 500px;
+    background-color: #fff9e6;
+    position: absolute;
+    right: 100px;
+    top: 100px;
+    border: 5px solid moccasin;
+}
+
+fieldset {
+    border: medium none !important;
+    margin: 0 0 10px;
+    min-width: 100%;
+    padding: 0;
+    width: 100%;
+    position: relative;
+    right: -20px;
   }
+
+  input[type=text] {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #000000;
+    outline: none;
+    font-family: 'Bradley Hand';  
+    width: 500px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
