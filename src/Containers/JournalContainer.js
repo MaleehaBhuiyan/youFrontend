@@ -1,5 +1,6 @@
 import React from 'react'
 import Calendar from '../Components/Calendar'
+import {Redirect} from 'react-router-dom'
 
 const URL = "http://localhost:3000/entries"
 
@@ -38,11 +39,18 @@ class JournalContainer extends React.Component{
     }
 
     render(){
-        console.log("Entries: ", this.state.entries)
         return(
-        <div>
-            <Calendar style={style} width="302px" entries={this.state.entries} createNewEntry={this.createNewEntry} />  
-        </div>
+        <>
+          {this.props.user ? 
+            <div>
+              <Calendar style={style} width="302px" entries={this.state.entries} createNewEntry={this.createNewEntry} />  
+            </div>
+            :
+
+            <Redirect to="/welcome" />
+          
+          }
+        </>
         )
     }
 }

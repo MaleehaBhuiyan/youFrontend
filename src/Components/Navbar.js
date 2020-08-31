@@ -18,13 +18,22 @@ class Navbar extends React.Component {
                 <ul id="menu">
                 <li><NavLink to="/home" exact>Home</NavLink></li>
                 <li><NavLink to="/journal" exact>Journal</NavLink></li>
+                {this.props.user ? 
+                  <li><NavLink to="/welcome">
+                    <li onClick={this.props.clickHandler}>Log Out</li>
+                  </NavLink></li>
+                  :
+                  <li><NavLink to="/login">
+                    <li>Login</li>
+                  </NavLink></li>
+                }
                 </ul>
             </div>
             </nav>
 
 
 
-            <div class="menuIcon">
+            {/* <div class="menuIcon">
             <span class="icon icon-bars"></span>
             <span class="icon icon-bars overlay"></span>
             </div>
@@ -37,7 +46,7 @@ class Navbar extends React.Component {
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
                 </ul>
-            </div>
+            </div> */}
         </div>
     )
   }
