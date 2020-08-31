@@ -6,7 +6,7 @@ import JournalContainer from '../Containers/JournalContainer';
 
 export default class Calendar extends React.Component {
     state = {
-        showForm: false,
+        showForm: true,
         showEntry: false,
         dateContext: moment(),
         today: moment(),
@@ -19,7 +19,11 @@ export default class Calendar extends React.Component {
         super(props);
         this.width = props.width || "350px";
         this.style = props.style || {};
-        this.style.width = this.width; // add this
+        // this.style.width = this.width; // add this
+    }
+
+    filteredEntries = () => {
+        return this.props.entries.filter(entry => entry.date.includes(this.state.selectedDay))
     }
 
 
@@ -175,16 +179,25 @@ export default class Calendar extends React.Component {
     }
 
     formHandler = () => {
-        let formNewState = !this.state.showForm
-        this.setState({ showForm: formNewState })
+        if(this.props.entries.filter(entry => entry.date.includes(this.state.selectedDay)) === false){
+            let entryNewState = false 
+            this.setState({ showEntry:entryNewState })
+        }
+        // else{
+        //     let formNewState = !this.state.showForm
+        //     this.setState({ showForm: formNewState })
+        // }
     }
 
     entryHandler = () => {
         let entryNewState = !this.state.showEntry
         this.setState({ showEntry: entryNewState })
+        let formNewState = false 
+        this.setState({ showForm:formNewState })
     }
 
     render() {
+
         let weekdays = this.weekdaysShort.map((day) => {
             return (
                 <td key={day} className="week-day">{day}</td>
@@ -255,9 +268,9 @@ export default class Calendar extends React.Component {
                                         <this.MonthNav />
                                         {" "}
                                         <this.YearNav />
-                                        <div className="calendar-slide-show">
+                                        {/* <div className="calendar-slide-show">
                                         Slideshow
-                                    </div>
+                                    </div> */}
                                     </td>
                                     <td colSpan="2" className="nav-month">
                                         <i className="prev fa fa-fw fa-chevron-left"
@@ -281,11 +294,11 @@ export default class Calendar extends React.Component {
                 </div>
                 
                     <div>
-                        {this.state.showForm && <JournalForm />}
+                        {this.state.showForm && <JournalForm today={this.state.today.date()} createNewEntry={this.props.createNewEntry} />}
                     </div>
 
                     <div>
-                        {this.state.showEntry && <JournalEntry />}
+                        {this.state.showEntry && <JournalEntry entry={this.filteredEntries()} />}
                     </div>
             </div>
         );
