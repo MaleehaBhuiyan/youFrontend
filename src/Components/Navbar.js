@@ -11,7 +11,7 @@ class Navbar extends React.Component {
             
                 <div class="logo">
 
-                <a href="#home"><i class="fa fa-angellist"></i> Logo</a>
+                <a href="#home"><i class="fa fa-angellist"></i> Y❤U</a>
                 </div>
 
             

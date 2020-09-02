@@ -10,7 +10,7 @@ class JournalForm extends React.Component{
         today_two: "",
         today_three: "",
         daily_affirmation: "",
-        date: "August 28, 2020",
+        date: "September 2, 2020",
         user_id: 1
 
     }
@@ -22,11 +22,10 @@ class JournalForm extends React.Component{
     submitHandler = (e) => {
         e.preventDefault()
         this.props.createNewEntry(this.state)
+        this.props.changeHandler(false)
     }
 
     render(){
-
-
         return(
             <div id="wrapper">
     <div id="container">
@@ -39,7 +38,7 @@ class JournalForm extends React.Component{
             <article>
                 <br/>
 
-                <h6 class="chapter-title">August {this.props.today}, 2020</h6>
+                <h6 class="chapter-title">September {this.props.today}, 2020</h6>
 
                 <br/>
                 <br/>
@@ -51,19 +50,19 @@ class JournalForm extends React.Component{
                     <br/>
                     
                     <fieldset>
-                        1. <input type="text" name="great_one" value={this.state.great_one} onChange={this.changeHandler} />
+                        1. <input className="form-input" type="text" name="great_one" value={this.state.great_one} onChange={this.changeHandler} />
                     </fieldset>
 
                     <br/>
                     
                     <fieldset>
-                        2. <input type="text" name="great_two" value={this.state.great_two} onChange={this.changeHandler} />
+                        2. <input className="form-input"  type="text" name="great_two" value={this.state.great_two} onChange={this.changeHandler} />
                     </fieldset>
 
                     <br/>
                     
                     <fieldset>
-                        3. <input type="text" name="great_three" value={this.state.great_three} onChange={this.changeHandler} />
+                        3. <input className="form-input" type="text" name="great_three" value={this.state.great_three} onChange={this.changeHandler} />
                     </fieldset>
 
                     <br/>
@@ -94,19 +93,19 @@ class JournalForm extends React.Component{
                         <br/>
 
                         <fieldset>
-                            1. <input type="text" name="today_one" value={this.state.today_one} onChange={this.changeHandler} />
+                            1. <input className="form-input" type="text" name="today_one" value={this.state.today_one} onChange={this.changeHandler} />
                         </fieldset>
 
                         <br/>
 
                         <fieldset>
-                            2. <input type="text" name="today_two" value={this.state.today_two} onChange={this.changeHandler} />
+                            2. <input className="form-input" type="text" name="today_two" value={this.state.today_two} onChange={this.changeHandler} />
                         </fieldset>
 
                         <br/>
 
                         <fieldset>
-                            3. <input type="text" name="today_three" value={this.state.today_three} onChange={this.changeHandler} />
+                            3. <input className="form-input" type="text" name="today_three" value={this.state.today_three} onChange={this.changeHandler} />
                         </fieldset>
 
                         <br/>
@@ -118,7 +117,7 @@ class JournalForm extends React.Component{
                         <br/>
                         
                         <fieldset>
-                            <input type="text" name="daily_affirmation" value={this.state.daily_affirmation} onChange={this.changeHandler} />
+                            <input className="form-input" type="text" name="daily_affirmation" value={this.state.daily_affirmation} onChange={this.changeHandler} />
                         </fieldset>
 
                         <br/>

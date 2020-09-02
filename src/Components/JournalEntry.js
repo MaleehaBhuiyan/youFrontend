@@ -30,6 +30,7 @@ class JournalEntry extends React.Component{
                                       <h3><strong>{this.props.entry[0].date}</strong></h3>
                                       <p>‍</p>
                                       <p></p>
+                                      <p>I am grateful for </p>
                                       <p className="entry-writing">1. {this.props.entry[0].great_one}</p>
                                       <p className="entry-writing">2. {this.props.entry[0].great_two}</p>
                                       <p className="entry-writing">3. {this.props.entry[0].great_three}</p>

@@ -2,10 +2,12 @@ import React from 'react'
 import moment from 'moment'
 import JournalForm from './JournalForm'
 import JournalEntry from './JournalEntry'
+import Message from './Message'
 import JournalContainer from '../Containers/JournalContainer';
 
 export default class Calendar extends React.Component {
     state = {
+        showMessage: false,
         showForm: true,
         showEntry: false,
         dateContext: moment(),
@@ -196,6 +198,11 @@ export default class Calendar extends React.Component {
         this.setState({ showForm:formNewState })
     }
 
+    changeHandler = (obj) => {
+        this.setState({ showForm:obj })
+        this.setState({ showMessage: true})
+    }
+
     render() {
 
         let weekdays = this.weekdaysShort.map((day) => {
@@ -294,11 +301,15 @@ export default class Calendar extends React.Component {
                 </div>
                 
                     <div>
-                        {this.state.showForm && <JournalForm today={this.state.today.date()} createNewEntry={this.props.createNewEntry} />}
+                        {this.state.showForm && <JournalForm today={this.state.today.date()} createNewEntry={this.props.createNewEntry} changeHandler={this.changeHandler} />}
                     </div>
 
                     <div>
                         {this.state.showEntry && <JournalEntry entry={this.filteredEntries()} />}
+                    </div>
+
+                    <div>
+                    {this.state.showMessage && <Message />}
                     </div>
             </div>
         );

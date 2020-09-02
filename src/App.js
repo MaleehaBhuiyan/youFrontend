@@ -71,7 +71,7 @@ class App extends React.Component{
   render(){
     return(
       <>
-        <BrowserRouter>
+       
           <Navbar user={this.state.user} clickHandler={this.logOutHandler} />
           <Switch>
             <Route path="/login" render={() => <Login submitHandler={this.loginHandler} />} />
@@ -80,7 +80,7 @@ class App extends React.Component{
             <Route path="/home" render={() => <Home user={this.state.user} />} />
             <Route path="/journal" render={() => <JournalContainer user={this.state.user} />} />
           </Switch>
-        </BrowserRouter>
+       
       </>
     )
   }

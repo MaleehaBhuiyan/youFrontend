@@ -14,15 +14,9 @@ class Login extends React.Component {
     submitHandler = (e) => {
         e.preventDefault()
         this.props.submitHandler(this.state)
-         //having problems with redirecting... redirects to welcome but doesnt redirect to home ...
-
-        // const { history } = this.props;
-        // history.push("/home")
-        // this.props.history.push("/home")
     }
 
     render(){
-        console.log("History Props in Login.js: ", this.props.history)
         return(
             <>
                 <br/>
@@ -30,11 +24,60 @@ class Login extends React.Component {
                 <br/>
                 <br/>
                 <br/>
-                <form onSubmit={this.submitHandler}>
-                    <input type="text" name="username" placeholder="Username" value={this.state.username} onChange={this.changeHandler} />
-                    <input type="password" name="password" placeholder="Password" value={this.state.password} onChange={this.changeHandler} />
-                    <input type="submit" value="Login" />
-                </form>
+
+                <div className="login">
+                    <div className="heading">
+                        <h2>Sign In</h2>
+                        <form onSubmit={this.submitHandler}>
+
+                        <div class="form-group">
+                            <input required="required" class="form-control" type="text" name="username" value={this.state.username} onChange={this.changeHandler} />
+                            <label for="input" class="control-label">Username</label><i class="bar"></i>
+                        </div>
+
+
+                        <br/>
+                        <div class="form-group">
+                            <input required="required" class="form-control" type="password" name="password" value={this.state.password} onChange={this.changeHandler} />
+                            <label for="input" class="control-label">Password</label><i class="bar"></i>
+                        </div>
+                        <br/>
+                        {/* <button type="submit" class="login-button">Login</button> */}
+
+                        <div class="button-container">
+                            <button type="submit" class="button"><span>Login</span></button>
+                        </div>
+
+
+                        </form>
+                    </div>
+                </div>
+
+
+                <div id="background-wrap">
+                <br/>
+                <br/>
+                <br/>
+                    <div class="x1">
+                         <div class="cloud"></div>
+                    </div>
+
+                    <div class="x2">
+                        <div class="cloud"></div>
+                    </div>
+
+                    <div class="x3">
+                        <div class="cloud"></div>
+                    </div>
+
+                    <div class="x4">
+                        <div class="cloud"></div>
+                     </div>
+
+                    <div class="x5">
+                        <div class="cloud"></div>
+                    </div>
+                </div>
             </>
         
         )
@@ -43,3 +86,22 @@ class Login extends React.Component {
 
 // export default withRouter(Login);
 export default Login;
+
+
+{/* <div class="form-group">
+    <input class="form-control" type="text" name="username" placeholder="Username" value={this.state.username} onChange={this.changeHandler} />
+      <label for="input" class="control-label">Textfield</label><i class="bar"></i>
+</div> */}
+
+    
+
+  
+
+
+   
+
+
+
+
+
+ 		
