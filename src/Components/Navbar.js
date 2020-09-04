@@ -18,6 +18,7 @@ class Navbar extends React.Component {
                 <ul id="menu">
                 <li><NavLink to="/home" exact>Home</NavLink></li>
                 <li><NavLink to="/journal" exact>Journal</NavLink></li>
+                <li><NavLink to="/moodTracker" exact>Mood Tracker</NavLink></li>
                 {this.props.user ? 
                   <li><NavLink to="/welcome">
                     <li onClick={this.props.clickHandler}>Log Out</li>

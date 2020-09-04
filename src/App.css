@@ -2350,9 +2350,202 @@ fieldset {
 
 
 
+/* MOOD TRACKER CONTAINER */
+
+
+.grid-container {
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  background-color: white;
+  border: 5px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+
+  position: relative;
+  left: 30px;
+  top: -200px;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 1px;
+  font-size: 20px;
+  text-align: center;
+}
+.pink{
+  background-color: pink;
+  border: 1px solid rgba(0, 0, 0, 0.8) ;
+}
+
+.blue{
+  background-color: powderblue;
+  border: 1px solid rgba(0, 0, 0, 0.8) ;
+}
+
+.green{
+  background-color: lightgreen;
+  border: 1px solid rgba(0, 0, 0, 0.8) ;
+}
+
+.yellow{
+  background-color: cornsilk;
+  border: 1px solid rgba(0, 0, 0, 0.8) ;
+}
+
+.orange{
+  background-color: sandybrown;
+  border: 1px solid rgba(0, 0, 0, 0.8) ;
+}
+
+.red{
+  background-color: 	crimson	;
+  border: 1px solid rgba(0, 0, 0, 0.8) ;
+}
+
+.highlight{
+  display: inline-block;
+  animation: blinkingBackground 2s infinite;
+}
+@keyframes blinkingBackground{
+  0%		{ background-color: black;}
+  25%		{ background-color: white;}
+  50%		{ background-color: black;}
+  75%		{ background-color: white;}
+  100%	        { background-color: black;}
+}
+
+
+.mood-tracker-title{
+  position: relative;
+  left: 90px;
+  top: -200px;
+}
+
+.mood-tracker-key{
+  /* background-color: rgba(255, 255, 255, 0.8);
+  border: 3px solid rgba(0, 0, 0, 0.8); */
+  width: 400px;
+  padding: 1px;
+  position: relative;
+  left: 400px;
+  top: -1150px;
+}
+
+.pink-square{
+  border: 2px solid rgba(0, 0, 0, 0.8);
+  width: 20px;
+  height: 20px;
+  position: relative;
+  right: -10px;
+  background-color: pink;
+}
+
+.pink-text{
+  position: relative;
+  width: 100px;
+  right: -40px;
+  top: -20px;
+  font-weight: bold;
+}
+
+
+.blue-square{
+  border: 2px solid rgba(0, 0, 0, 0.8);
+  width: 20px;
+  height: 20px;
+  position: relative;
+  right: -10px;
+  background-color: powderblue;
+}
+
+.blue-text{
+  position: relative;
+  right: -40px;
+  top: -20px;
+  font-weight: bold;
+  width: 150px;
+}
+
+.green-square{
+  border: 2px solid rgba(0, 0, 0, 0.8);
+  width: 20px;
+  height: 20px;
+  position: relative;
+  right: -10px;
+  background-color: lightgreen;
+}
+
+.green-text{
+  position: relative;
+  right: -40px;
+  top: -20px;
+  font-weight: bold;
+  width: 150px;
+}
+
+.yellow-square{
+  border: 2px solid rgba(0, 0, 0, 0.8);
+  width: 20px;
+  height: 20px;
+  position: relative;
+  right: -10px;
+  background-color: cornsilk;
+}
+
+.yellow-text{
+  position: relative;
+  right: -40px;
+  top: -20px;
+  font-weight: bold;
+  width: 150px;
+}
+
+.orange-square{
+  border: 2px solid rgba(0, 0, 0, 0.8);
+  width: 20px;
+  height: 20px;
+  position: relative;
+  right: -10px;
+  background-color: sandybrown;
+}
+
+.orange-text{
+  position: relative;
+  right: -40px;
+  top: -20px;
+  font-weight: bold;
+  width: 150px;
+}
+
+.red-square{
+  border: 2px solid rgba(0, 0, 0, 0.8);
+  width: 20px;
+  height: 20px;
+  position: relative;
+  right: -10px;
+  background-color: crimson;
+}
+
+.red-text{
+  position: relative;
+  right: -40px;
+  top: -20px;
+  font-weight: bold;
+  width: 150px;
+}
 
 
 
+.key-child {
+  width: 50%;
+  float: left;
+  padding: 20px;
+} 
 
+
+.mood-tracker-form{
+  position: relative;
+  right: -40px;
+  top: -800px;
+}
 
 
