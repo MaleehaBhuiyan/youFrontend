@@ -7,6 +7,7 @@ import Welcome from './Components/Welcome'
 import Home from './Components/Home'
 import JournalContainer from './Containers/JournalContainer'
 import MoodTrackerContainer from './Containers/MoodTrackerContainer'
+import VisionBoardContainer from './Containers/VisionBoardContainer'
 import Signup from './Components/Signup.js'
 import Login from './Components/Login.js'
 
@@ -78,6 +79,7 @@ class App extends React.Component{
             <Route path="/home" render={() => <Home user={this.state.user} />} />
             <Route path="/journal" render={() => <JournalContainer user={this.state.user} />} />
             <Route path="/moodTracker" render={() => <MoodTrackerContainer user={this.state.user} />} />
+            <Route path="/visionBoard" render={() => <VisionBoardContainer user={this.state.user} />} />
           </Switch>
        
       </>

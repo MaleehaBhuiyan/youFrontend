@@ -74,7 +74,7 @@ class MoodTrackerChart extends React.Component{
                 <div className="grid-item" className="yellow"></div>
                 <div className="grid-item" className="green"></div>
                 <div className="grid-item" className="blue"></div>  
-                <div className="grid-item" className={this.props.mood[0] ? this.props.mood[0].mood : "highlight" }></div>
+                <div className="grid-item" className="green"></div>
                 <div className="grid-item"></div>
                 <div className="grid-item"></div>  
                 <div className="grid-item"></div> 
@@ -88,7 +88,7 @@ class MoodTrackerChart extends React.Component{
                 <div className="grid-item" className="pink"></div>
                 <div className="grid-item" className="blue"></div>
                 <div className="grid-item" className="red"></div>  
-                <div className="grid-item"></div>
+                <div className="grid-item" className="blue"></div>
                 <div className="grid-item"></div>
                 <div className="grid-item"></div>  
                 <div className="grid-item"></div>
@@ -102,7 +102,7 @@ class MoodTrackerChart extends React.Component{
                 <div className="grid-item" className="blue"></div>
                 <div className="grid-item" className="pink"></div>
                 <div className="grid-item" className="pink"></div>  
-                <div className="grid-item"></div>
+                <div className="grid-item" className="orange"></div>
                 <div className="grid-item"></div>
                 <div className="grid-item"></div>  
                 <div className="grid-item"></div>
@@ -116,7 +116,7 @@ class MoodTrackerChart extends React.Component{
                 <div className="grid-item" className="red"></div>
                 <div className="grid-item" className="pink"></div>
                 <div className="grid-item" className="yellow"></div>  
-                <div className="grid-item"></div>
+                <div className="grid-item" className="pink"></div>
                 <div className="grid-item"></div>
                 <div className="grid-item"></div>  
                 <div className="grid-item"></div>
@@ -130,7 +130,7 @@ class MoodTrackerChart extends React.Component{
                 <div className="grid-item" className="green"></div>
                 <div className="grid-item" className="orange"></div>
                 <div className="grid-item" className="green"></div>  
-                <div className="grid-item"></div>
+                <div className="grid-item" className={this.props.mood[0] ? this.props.mood[0].mood : "highlight" }></div>
                 <div className="grid-item"></div>
                 <div className="grid-item"></div>  
                 <div className="grid-item"></div>

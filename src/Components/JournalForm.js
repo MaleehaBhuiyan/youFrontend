@@ -10,7 +10,7 @@ class JournalForm extends React.Component{
         today_two: "",
         today_three: "",
         daily_affirmation: "",
-        date: "September 2, 2020",
+        date: "September 8, 2020",
         user_id: 1
 
     }

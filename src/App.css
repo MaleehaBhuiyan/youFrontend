@@ -1748,7 +1748,7 @@ z-index: -1;
 /* ANIMATIONS */
 
 .x1 {
--webkit-animation: animateCloud 35s linear infinite;
+-webkit-animation: animateCloud linear infinite;
 -moz-animation: animateCloud 35s linear infinite;
 animation: animateCloud 35s linear infinite;
 
@@ -2548,4 +2548,282 @@ fieldset {
   top: -800px;
 }
 
+.lookingGirl{
+  position: absolute;
+  right: -10px;
+  top: 300px;
+}
 
+.sideCloud{
+  position: absolute;
+  right: -10px;
+  top: 170px;
+}
+
+.fullCloud{
+  position: absolute;
+  right: 200px;
+  top: 100px;
+}
+
+
+/* drop down form button css  */
+
+.mood-form-btn{
+  position: absolute;
+  top: 45px;
+  right: 700px;
+  width: 100px;
+  text-decoration: none;
+  text-transform:uppercase;
+  color: #000;
+   background-color: #ddbea9;
+   outline: none;
+  border: 2px solid #000;
+  padding: 10px;
+  border-radius: 10%;
+  font-weight: bold;
+  box-shadow: 4px 4px 0px 0px rgba(0,0,0,0.75);
+  cursor: pointer;
+  transition: box-shadow .2s ease-in-out, background .2s ease-in-out, color .2s ease-in;
+  filter: drop-shadow(3px 3px 4px black);
+}
+
+.mood-form-btn{
+  background-color: #cb997e;
+  box-shadow: 0px -1px 0px -1px ;
+  transition :all .3s ease;
+}
+
+/* Drop down select menu */
+
+select{
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #000000;
+  outline: none;
+  font-family: Baskerville;
+  font-size: 20px;
+  font-weight: 900;
+  width: 100px;
+}
+
+
+/* Report button */
+
+
+.report-form-btn{
+  position: absolute;
+  top: -100px;
+  right: 400px;
+  width: 100px;
+  text-decoration: none;
+  text-transform:uppercase;
+  color: #000;
+   background-color: #ddbea9;
+   outline: none;
+  border: 2px solid #000;
+  padding: 10px;
+  border-radius: 10%;
+  font-weight: bold;
+  box-shadow: 4px 4px 0px 0px rgba(0,0,0,0.75);
+  cursor: pointer;
+  transition: box-shadow .2s ease-in-out, background .2s ease-in-out, color .2s ease-in;
+  filter: drop-shadow(3px 3px 4px black);
+}
+
+.report-form-btn{
+  background-color: #cb997e;
+  box-shadow: 0px -1px 0px -1px ;
+  transition :all .3s ease;
+}
+
+
+
+
+.mood-analytics-option{
+  position: relative;
+  right: 250px;
+  top: -700px;
+  text-align: center;
+}
+
+
+
+
+/* Mood Analytics CSS */
+
+.mood-analytics{
+  position: relative;
+  right: 250px;
+  top: -800px;
+  text-align: center;
+}
+
+.evaluation{
+  position: relative;
+  right: -1150px;
+  top: -200px;
+  text-align: left;
+  width: 300px;
+  padding: 1%;
+  font-weight: bold;
+}
+
+.mood-tips{
+  position: relative;
+  right: -650px;
+  top: -200px;
+  text-align: left;
+  width: 450px;
+  padding: 1%;
+  font-weight: bold;
+}
+
+.mood-resources{
+  position: relative;
+  right: -1150px;
+  top: -936px;
+  text-align: left;
+  width: 300px;
+  padding: 1%;
+  font-weight: bold;
+}
+
+.flowerGirlTwo{
+  position: relative;
+  top: -20px
+}
+
+
+.flowerGirlOne{
+  position: relative;
+  top: 20px
+}
+
+
+
+/* VISION BOARD FORM CSS*/
+
+.vision-form-container {
+  width: 950px;
+  /* width: 100%; */
+  margin: 0 auto;
+  position: relative;
+}
+
+#contact {
+  background: #F9F9F9;
+  padding: 25px;
+  margin: 150px 0;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  height: 800px
+}
+
+#contact h3 {
+  display: block;
+  font-size: 30px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+#contact h4 {
+  margin: 5px 0 15px;
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.vision-field-set {
+  border: medium none !important;
+  margin: 0 0 10px;
+  min-width: 100%;
+  padding: 0;
+  width: 100%;
+}
+
+#contact input[type="text"],
+#contact textarea {
+  width: 40%;
+  border: 1px solid #ccc;
+  background: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+}
+
+#contact input[type="text"]:hover,
+#contact input[type="email"]:hover,
+#contact input[type="tel"]:hover,
+#contact input[type="url"]:hover,
+#contact textarea:hover {
+  -webkit-transition: border-color 0.3s ease-in-out;
+  -moz-transition: border-color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out;
+  border: 1px solid #aaa;
+}
+
+#contact textarea {
+  height: 100px;
+  max-width: 100%;
+  resize: none;
+}
+
+#contact button[type="submit"] {
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  background: #4CAF50;
+  color: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+  font-size: 15px;
+}
+
+#contact button[type="submit"]:hover {
+  background: #43A047;
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#contact button[type="submit"]:active {
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.copyright {
+  text-align: center;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+  outline: 0;
+  border: 1px solid #aaa;
+}
+
+::-webkit-input-placeholder {
+  color: #888;
+}
+
+:-moz-placeholder {
+  color: #888;
+}
+
+::-moz-placeholder {
+  color: #888;
+}
+
+:-ms-input-placeholder {
+  color: #888;
+}
+
+.second-form-side{
+  position: relative;
+  left: 500px;
+  top: -618px;
+}
+
+.board-button{
+  position: relative;
+  top: -1280px;
+  right: -650px
+}

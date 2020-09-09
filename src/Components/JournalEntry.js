@@ -1,10 +1,14 @@
 import React from 'react'
 
+const flowerGirlOne = require('../images/flowerGirlOne.png')
+const flowerGirlTwo = require('../images/flowerGirlTwo.png')
+
+
 class JournalEntry extends React.Component{
     render(){
       console.log("Entry in Journal Entry Component: ", this.props.entry[0].date)
         return(
-            <div>
+            <div className="old-entry">
                   <div class="scene">
                     <div class="book-wrap">
                       <div class="left-side">
@@ -36,6 +40,9 @@ class JournalEntry extends React.Component{
                                       <p className="entry-writing">3. {this.props.entry[0].great_three}</p>
                                       <p></p>
                                       <p></p>
+                                      <div className="flowerGirlOne">
+                                          <img src={flowerGirlOne} width="300" />
+                                      </div>
                                       </div>
                                       </div>
                                       </div>
@@ -68,6 +75,9 @@ class JournalEntry extends React.Component{
                                                       <p>Daily affirmation </p>
                                                       <p className="entry-writing">‍{this.props.entry[0].daily_affirmation}</p>
                                                       <p>‍</p>
+                                                      <div className="flowerGirlTwo">
+                                                        <img src={flowerGirlTwo} width="250" />
+                                                      </div>
                                               
                                                       </div>
                                                       </div>
